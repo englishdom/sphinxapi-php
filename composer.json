@@ -2,7 +2,8 @@
     "name": "englishdom/sphinxapi-php",
     "description": "SphinxSearch PHP API",
     "require": {
-        "php": ">=4"
+        "php": ">=5",
+        "zendframework/zendframework": ">=2.1.0"
     },
     "license": "GPL",
     "type": "library",
@@ -15,6 +16,11 @@
         }
     ],
     "autoload": {
-        "classmap": ["sphinxapi.php"]
+        "classmap": [
+            "./sphinxapi.php"
+        ],
+        "psr-0": {
+            "SphinxSearch": "src/"
+        }
     }
 }

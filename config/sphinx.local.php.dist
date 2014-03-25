@@ -1,0 +1,17 @@
+<?php
+
+return array(
+    'sphinxapi' => array(
+        'server'    => '10.0.0.100',
+        'port'      => '9312',
+        'config'    => 'data/sphinx/sphinx.conf'
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'SphinxSearch\Adapter' => 'SphinxSearch\AdapterServiceFactory',
+        ),
+        'aliases' => array(
+            'sphinxapi' => 'SphinxSearch\Adapter'
+        )
+    )
+);
